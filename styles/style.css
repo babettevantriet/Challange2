@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+body{
+	background-image: url('../images/middag.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	background-color: #111111;
+	margin-left: 50px;
+	width: 100%;
+}
+
+h1{
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: 900;
+	letter-spacing: 0px;
+	color: #fff;
+	display: block;
+}
+
+p{
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+#clock{
+	font-family: 'Roboto Mono', monospace;
+	color: #fff;
+	font-size: 80px;
+	font-weight: 700;
+	width: 300px;
+	opacity: 0;
+}
+
+#clock.animation {
+	transition-duration: 3s;
+	opacity: 1;
+}
+
+/*De afmetingen voor de apple watch*/
+@media screen and (min-width: 150px){
+	body{
+		margin: 5px;
+		width: 136px;
+		height: 178px;
+	}
+
+	h1{
+		display: none;
+		font-size: 20px;
+	}
+
+	#clock{
+		font-size: 30px;
+	}
+}
+
+/*De afmetingen voor de mobile telefoon*/
+@media screen and (min-width: 300px){
+	body{
+		margin: 50px;
+		min-height: 700px;
+	}
+	h1{
+		display: block;
+		font-size: 30px;
+	}
+
+	#clock{
+		font-size: 50px;
+		text-align: left;
+		}
+}
+
+/*Afmetingen voor de ipad*/
+@media screen and (min-width: 1000px){
+	body{
+		margin: 100px;
+	}
+
+	h1{
+		font-size:40px;
+	}
+}
+
+/*afmetingen voor de laptop*/
+@media screen and (min-width: 1300px){
+	#clock{
+		font-size: 80px;
+	}
+
+	h1{
+		font-size: 40px;
+	}
+
+}
+
+/*afmetingen voor een grote desktop*/
+@media screen and (min-width: 1900px){
+	#clock{
+		font-size: 100px;
+	}
+
+	h1{
+		font-size: 50px;
+	}
+}
+
+
+
