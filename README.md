@@ -1,7 +1,7 @@
 # Challenge2
  This is the second challenge for XT2
  
-## Typo challAnge **challenge
+## Typo: challange **challenge
 My apologies for the typo. 
 
 ## background change
