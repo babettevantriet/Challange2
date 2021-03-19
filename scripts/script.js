@@ -59,38 +59,36 @@ function startTime(){
 
 	greetingFunction();
 
-	// functie voor het veranderen van de achtergrond
-	function backgroundChange() {
-	  var time = new Date().getHours();
-	  
-	  if (time < 6) {
-	  	document.body.style.backgroundImage = url('../images/nacht.png');
-
-	  } 
-
-	  else if (time < 12) {
-	  	document.body.style.backgroundImage = url('../images/ochtend.png');
-	  } 
-
-	  else if (time < 18) {
-	  	document.body.style.backgroundImage = url('../images/middag.png');
-	  } 
-
-	  else if (time < 24) {
-	  	document.body.style.backgroundImage = url('../images/avond.png');
-	  } 
-	  
-	    
-	}
 	
 }
 startTime();
 
-var clock = document.getElementById('clock');
-clock.classList.add('animation');
+// functie voor het veranderen van de achtergrond
+function backgroundChange() {
+	var tijd = new Date().getHours();
+	var ochtend = url('../images/ochtend.png');
+	var middag = url('../images/middag.png');
+	var avond = url('../images/avond.png');
+	var nacht = url('../images/nacht.png');
+	  
+	if (tijd < 6) {
+	  document.getElementsByTagName("body").style.backgroundImage = nacht;
+	} 
 
+	else if (tijd < 12) {
+	  document.getElementsByTagName("body").style.backgroundImage = ochtend;
+	} 
 
+	else if (tijd < 18) {
+	  document.getElementsByTagName("body").style.backgroundImage = middag;
+	} 
 
+	else if (tijd < 24) {
+	document.getElementsByTagName("body").style.backgroundImage = avond;
+	} 	    
+}
+
+backgroundChange();
 
 
 

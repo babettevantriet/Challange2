@@ -8,8 +8,35 @@ body{
 	background-size: cover;
 	height: 100%;
 	background-color: #111111;
-	margin-left: 50px;
-	width: 100%;
+	
+}
+
+#main{
+	display: grid;
+	grid-gap: 10px; 
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"groet groet"
+	"datum datum"
+	"klok klok"
+	"raket raket"
+}
+
+.groet{
+  grid-area: groet;
+}
+
+.datum{
+  grid-area: datum;
+}
+
+.klok{
+  grid-area: klok;
+}
+
+.raket{
+  grid-area: raket;
+  position: relative;
 }
 
 h1{
@@ -33,12 +60,27 @@ p{
 	font-size: 80px;
 	font-weight: 700;
 	width: 300px;
-	opacity: 0;
+
 }
 
-#clock.animation {
+#rocket.animation {
 	transition-duration: 3s;
 	opacity: 1;
+}
+
+#rocket{
+	position: absolute;
+	height: 300px;
+	animation:1000ms hover infinite alternate ease-in-out;
+}
+
+@keyframes hover {
+  0% { 
+  	top: 110px; 
+  }
+  100% { 
+  	top: 80px;
+  }
 }
 
 /*De afmetingen voor de apple watch*/
@@ -47,6 +89,17 @@ p{
 		margin: 5px;
 		width: 136px;
 		height: 178px;
+	}
+
+	#main{
+		display: grid;
+		grid-gap: 1px; 
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"groet"
+		"datum"
+		"klok"
+		"raket"
 	}
 
 	h1{
@@ -63,7 +116,7 @@ p{
 @media screen and (min-width: 300px){
 	body{
 		margin: 50px;
-		min-height: 700px;
+		height: 736px;
 	}
 	h1{
 		display: block;
@@ -79,7 +132,29 @@ p{
 /*Afmetingen voor de ipad*/
 @media screen and (min-width: 1000px){
 	body{
-		margin: 100px;
+		height: 768px;
+	}
+
+	#main{
+		display: grid;
+		grid-gap: 1px; 
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"groet raket"
+		"datum raket"
+		"klok raket"
+	}
+
+	#rocket{
+		margin-left: 100px;
+	}
+
+	#clock{
+		font-size: 70px;
+	}
+
+	#date{
+		font-size: 30px;
 	}
 
 	h1{
@@ -89,18 +164,50 @@ p{
 
 /*afmetingen voor de laptop*/
 @media screen and (min-width: 1300px){
+	#main{
+		display: grid;
+		grid-gap: 10px; 
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 
+		"groet raket raket"
+		"datum raket raket"
+		"klok raket raket"
+	
+	}
+
 	#clock{
 		font-size: 80px;
+	}
+
+	#date{
+		font-size: 40px;
 	}
 
 	h1{
 		font-size: 40px;
 	}
 
+	#rocket{
+		margin-left: 300px;
+	}
+
 }
 
 /*afmetingen voor een grote desktop*/
 @media screen and (min-width: 1900px){
+	body{
+		height: 1080px;
+	}
+	#main{
+		display: grid;
+		grid-gap: 10px; 
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: 
+		"groet raket raket"
+		"datum raket raket"
+		"klok raket raket"
+	
+	}
 	#clock{
 		font-size: 100px;
 	}
